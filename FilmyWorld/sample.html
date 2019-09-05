@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+        
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filmy World</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+		.fa {
+		  padding: 10px;
+		  font-size: 20px;
+		  width: 40px;
+		  text-align: left;
+		  text-decoration: none;
+		  margin: 7px 10px;
+		}
+		
+		.fa:hover {
+			opacity: 0.5;
+		}
+		
+		
+	.imgOverlayl
+	{
+		position:relative;
+		width: 440px;
+		height: 540px;
+		background: url(img/image.png) no-repeat;
+		float: left; 
+		transition:0.5s;
+	}
+	
+	.imgOverlayl:hover {
+        opacity: 0.8;
+		background: url(img/image2.png) no-repeat;
+		transition:0.5s;
+
+	}
+	/*.imgOverlayl:after{
+		position: absolute;
+		top:0%;
+		bottom:10%;
+		left:0;
+		right:0;
+		word-wrap:break-word;
+		overflow:hidden;
+		background-color: rgba(0,0,0,0,6);
+		color:#fff;
+		padding:0;
+		opacity: 0;
+		content:attr(data-text);
+		transition: 0.5s;
+	}
+    .imgOverlayl:hover:after{
+    	opacity:1;
+    	top:0;
+    }*/
+
+	.imgOverlayr
+	{
+		width: 440px;
+		height: 540px;
+		background: url(img/image4.png) no-repeat;
+		float: right;
+
+	}
+	
+	.imgOverlayr:hover {
+        
+		background: url(img/image3.png) no-repeat;
+	}
+	
+ #f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 640px;
+  height: 640px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  text-indent: 20px;
+  background: url(img/GBresiz.jpg) no-repeat;
+
+}
+.face1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.face1.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  text-indent: 20px;
+  background: url(img/KPresiz.jpg) no-repeat;
+
+}
+.face2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.face2.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  text-indent: 20px;
+  background: url(img/JJresiz.jpg) no-repeat;
+
+}
+
+.face:after{
+		position: absolute;
+		top:50%;
+		bottom:50%;
+		left:0;
+		right:0;
+		word-wrap:break-word;
+		overflow:hidden;
+		background-color: rgba(0,0,0,0,6);
+		color:#fff;
+		padding:0;
+		opacity: 0;
+		content:attr(data-text);
+		transition: 0.5s;
+	}
+    .face:hover:after{
+    	opacity:1;
+    	top:0;
+    }
+
+    * {box-sizing: border-box}
+
+ Set height of body and the document to 100% 
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: transparent;
+  color: #fff;
+  float: left;
+border: 1px;
+  cursor: pointer;
+  padding: 16px 16px;
+  font-size: 19px;
+  width: 10%;
+}
+
+.tablink:hover {
+  background-color: transparent;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 10px;
+  height: 100%;
+}
+		
+		
+		</style>
+</head>
+<script>
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+</script>
+<body>
+	<div class="se-pre-con"></div>
+<header>
+	<img src="img/logo1.png" alt="Filmy world" class="logo">
+			
+<button class="tablink" ><a href="sample.html" style="font-size:19px;color:white;">About</a></button>
+<button class="tablink"><a href="sample.html" style="font-size:19px;color:white;">Awards</a></button>
+<button class="tablink"><a href="sample.html" style="font-size:19px;color:white;">FilmyFundas</a></button>
+<button class="tablink" ><a href="sample.html" style="font-size:19px;color:white;">Videos</a></button>
+<button class="tablink"><a href="contact.html" style="font-size:19px;color:white;">Contact</a></button>
+	
+</header>
+
+<section class="home-hero parallax--bg">
+	<div class="snowflakes" aria-hidden="true">
+		<div class="snowflake">
+		❅
+		</div>
+		<div class="snowflake">
+		❅
+		</div>
+		<div class="snowflake">
+		❆
+		</div>
+		<div class="snowflake">
+		❄
+		</div>
+		<div class="snowflake">
+		❅
+		</div>
+		<div class="snowflake">
+		❆
+		</div>
+		<div class="snowflake">
+		❄
+		</div>
+		<div class="snowflake">
+		❅
+		</div>
+		<div class="snowflake">
+		❆
+		</div>
+		<div class="snowflake">
+		❄
+		</div>
+	  </div> 
+            
+	<div class="container">
+		<h1 class="title parallax--box">
+        </h1>
+       
+	</div>
+</section>
+
+<section class="portfolio">
+	<h1>Released Movies</h1>
+<div id="f1_container">
+<div id="f1_card" class="shadow">
+  <div class="front face">
+    <img src="img/bg4.jpg">
+  </div>
+  <div class="back face center" >
+  <h2> Godhi Banna Sadharana Mykattu (2016)</h2>
+	<p>The film is about Venkob Rao (Anant Nag), a middle class simpleton ailing with Alzheimer's, who goes missing. His son, Shiva (Rakshit Shetty) is a career driven person, who is forced to pause his hectic life to search for his father. Sahana (Shruti Hariharan), a doctor who takes care of Venkob Rao also gets involved. In his search for his father, he finds a lot more than he set out to find.</p>
+  </div>
+</div>
+</div>
+<div id="f1_container">
+<div id="f1_card" class="shadow">
+  <div class="front face1">
+    <img src="img/bg3.jpg">
+  </div>
+  <div class="back face1 center" >
+  <h2>Kirik Party (2016)</h2>
+	<p>Kirik Party is the story of a gang of mischievous students, lead by the protagonist Karna (Rakshit Shetty), who has just joined an engineering college.</p>
+  </div>
+</div>
+</div>
+<div id="f1_container">
+<div id="f1_card" class="shadow">
+  <div class="front face2">
+    <img src="img/bg1.jpg">
+  </div>
+  <div class="back face2 center" >
+  <h2>Jeer Jimbe (2017)</h2>
+	<p>Jeerjimbe is an upcoming Indian Kannada language film directed by Karthik Saragur and produced by Beehive Productions in collaboration with Pushkara Mallikarjunaiah. The music was composed by Charan Raj.</p>
+  </div>
+</div>
+</div>	
+
+	
+
+</section>
+
+<section class="cta">
+	
+		<h1 ><font color=White>Upcoming Movies</font></h1>
+		<div class="row-1">
+		<div class="col-12">
+        <img src="img/curtainl.png" style="width:228px;height:728px;float: left;" >
+		<img src="img/curtainr.png" style="width:228px;height:728px;float: right;" >
+	
+	
+        <div class="imgOverlayl"  >
+                <div class="img">
+                	 
+				</div>
+        </div>
+		
+		<div class="imgOverlayr">
+			<div class="img" data-text="Humble Politician Nograj is a romantic comedy entertainer written and directed by Saad Khan and joinlty produced by Pushkar, Hemanth Rao and Rakshit.">
+				
+			</div>
+	</div>
+	</div>
+	</div>
+      
+		
+	
+</section>
+
+<footer>
+	<div class="container">
+            <div class="row-1">
+		<div class="col-3">
+				<img src="img/logo2.png" alt="Filmy World" class="logo" style="float:start;">
+       
+			
+<!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+      
+		</div>
+
+		
+
+		
+	</div>
+	
+	</div>
+	<div >
+			
+		<p style="text-align:end;">by AdvaitaInnovations</p>
+		
+	
+</div>
+</footer>
+
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+		<script src="js/parallax.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1136 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FilmyFundas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<style>
+			body {
+			  font-family: Arial;
+			  margin: 0;
+			}
+			
+			* {
+			  box-sizing: border-box;
+			}
+			
+			img {
+			  vertical-align:left;
+			}
+			
+			/* Position the image container (needed to position the left and right arrows) */
+			.container {
+			  position: left;
+			}
+			
+			/* Hide the images by default */
+			.mySlides {
+			  display: none;
+			}
+			
+			/* Add a pointer when hovering over the thumbnail images */
+			.cursor {
+			  cursor: pointer;
+			}
+			
+			/* Next & previous buttons */
+			.prev,
+			.next {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 40%;
+			  width: auto;
+			  padding: 16px;
+			  margin-top: -50px;
+			  color: white;
+			  font-weight: bold;
+			  font-size: 20px;
+			  border-radius: 0 3px 3px 0;
+			  user-select: none;
+			  -webkit-user-select: none;
+			}
+			
+			/* Position the "next button" to the right */
+			.next {
+			  right: 0;
+			  /* border-radius: 3px 0 0 3px; */
+			}
+			
+			/* On hover, add a black background color with a little bit see-through */
+			.prev:hover,
+			.next:hover {
+			  background-color: rgba(0, 0, 0, 0.8);
+			}
+			
+			/* Number text (1/3 etc) */
+			.numbertext {
+			  color: #f2f2f2;
+			  font-size: 12px;
+			 
+			  position: absolute;
+			  top: 0;
+			}
+			
+			/* Container for image text */
+			.caption-container {
+			  text-align: center;
+			  background-color: #222;
+			  padding: 2px 16px;
+			  color: white;
+			}
+			
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+			
+			/* Six columns side by side */
+			.column {
+			  float: left;
+			  width: 16.66%;
+			}
+			
+			/* Add a transparency effect for thumnbail images */
+			.demo {
+			  opacity: 0.6;
+			}
+			
+			.active,
+			.demo:hover {
+			  opacity: 1;
+			}
+			
+					
+					body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+.topnav a {
+  float: left;
+  color: #080808;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+
+  color:black;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+  
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+					
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: #ECAE80;
+  float: left;
+  border: 1px;
+  border-color: #ECAE80;
+  outline: 1.5px;
+  cursor: pointer;
+  padding: 16px 16px;
+  font-size: 19px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 10px;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  background: #eee;
+  user-select: none;
+}
+
+[type=radio] {
+  display: none;
+}
+
+#slider {
+  height: 35vw;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+#slider label {
+  margin: auto;
+  width: 60%;
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0; right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-30%,0,-200px);
+}
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(-15%,0,-100px);
+}
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+  transform: translate3d(0,0,0);
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(15%,0,-100px);
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(30%,0,-200px);
+}
+#slide1 {background-image: url("images/1.jpg")}
+#slide2 {background-image:url("images/2.jpg")}
+#slide3 {background-image:url("images/3.jpg")}
+#slide4 {background-image:url("images/4.jpg")}
+#slide5 {background-image:url("images/5.jpg")}
+
+
+@import url(https://fonts.googleapis.com/css?family=Anaheim);
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+    box-sizing: border-box;
+}
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+html,
+body{
+    min-height: 100%;
+}
+body{
+    background-image: radial-gradient(mintcream 0%, lightgray 100%);
+}
+h1{
+    display: table;
+    margin: 5% auto 0;
+    text-transform: uppercase;
+    font-family: 'Anaheim', sans-serif;
+    font-size: 4em;
+    font-weight: 400;
+    text-shadow: 0 1px white, 0 2px black;
+}
+.container1{
+    margin: 3% auto;
+    width: 210px;
+    height: 240px;
+    position: relative;
+    perspective: 1000px;
+}
+#carousel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotation 20s infinite linear;
+}
+#carousel:hover{
+    animation-play-state: paused;
+}
+#carousel figure{
+    display:inline-flex;
+    position: absolute;
+    width: 180px;
+    height: 150px;
+    left: 50px;
+    top: 50px;
+    background: black;
+    overflow: hidden;
+    border: solid 5px black;
+}
+#carousel figure:nth-child(1) { transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+img{
+    -webkit-filter: grayscale(1);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+img:hover{
+    -webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+input {
+  background:transparent;
+  border: 1px;
+  position: relative;
+  float: center;
+  outline: 1.5px;
+  width: 300px;
+  height: 30p;
+  top: 20px;
+  margin: 10;
+  padding: 14px 20px;
+ border-color: white;
+ text-decoration-color: white;
+}
+.button {
+  background-color: #ECAE80;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+
+</style>
+					
+	</head>
+	<body>
+
+	<nav id="colorlib-main-nav" role="navigation">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+		<div class="js-fullheight colorlib-table">
+			<div class="colorlib-table-cell js-fullheight">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="form-group">
+							<input type="text" class="form-control" id="search" placeholder="Enter any key to search...">
+							<!-- <button type="submit" class="btn btn-primary"><i class="icon-search3"></i></button>
+						</div> -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<ul>
+							<!-- <li class="active"><a href="index.html">Home</a></li> -->
+							<li><a href="menu.html">menus</a></li>
+							<li><a href="specialties.html">specialties</a></li>
+							<li><a href="reservation.html">Reservation</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="about.html">About us</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</nav>
+	
+	<div id="colorlib-page">
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="colorlib-navbar-brand">
+							<!-- <a class="colorlib-logo" href="index.html"><i class="flaticon-cutlery"></i><span>Lu</span><span>to</span></a> -->
+						</div>
+						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+			
+		
+		<aside id="colorlib-hero">
+			<div class="flexslider">
+				<ul class="slides">
+			   	<li style="background-image: url(images/evnt2.jpg);">
+			   		<div class="overlay"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<div class="desc">
+				   						<div class="content">
+												<h2><b><font color="white">Adding Visuals to Imagination</b></font>	</h2> 
+										   </div>
+					   					<p><a href="#about-desc" class="btn btn-primary btn-lg btn-learn">Scroll Down</a></p>
+					   					<div class="desc2"></div>
+				   					</div>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>
+			   	<li style="background-image: url(images/evnt3.jpg);">
+			   		<div class="overlay"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<div class="desc">
+											<h2><b><font color="white">Adding Visuals to Imagination</b></font>	</h2> 
+					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Scroll Down</a></p>
+					   					<div class="desc2"></div>
+					   				</div>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>
+			   	<li style="background-image: url(images/evnt4.jpg);">
+			   		<div class="overlay"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<div class="desc">
+											<h2><b><font color="white">Adding Visuals to Imagination</b></font>	</h2> 
+					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Scroll Down</a></p>
+					   					<div class="desc2"></div>
+					   				</div>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>
+			   	<li style="background-image: url(images/evnt5.jpg);">
+			   		<div class="overlay"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<div class="desc">
+											<h2><b><font color="white">Adding Visuals to Imagination</b></font>	</h2> 
+					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Scroll Down</a></p>
+					   					<div class="desc2"></div>
+					   				</div>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>	
+			  	</ul>
+			  	<div class="mouse">
+				   <a href="#" class="mouse-icon">
+				   	<div class="mouse-wheel"></div>
+				   </a>
+				</div>
+		  	</div>
+		</aside>
+
+		<div class="colorlib-intro">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6 text-center">
+						<div class="intro animate-box">
+							<span class="icon">
+								<i class="icon-map4"></i>
+							</span>
+							<h2>Address</h2>
+							<p>198 West 21th Street, Suite 721 New York NY 10016</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 text-center">
+						<div class="intro animate-box">
+							<span class="icon">
+								<i class="icon-clock4"></i>
+							</span>
+							<h2>Opening Time</h2>
+							<p>Monday - Sunday</p>
+							<span>8am - 9pm</span>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 text-center">
+						<div class="intro animate-box">
+							<span class="icon">
+								<i class="icon-mobile2"></i>
+							</span>
+							<h2>Phone</h2>
+							<p>+ 001 234 567</p>
+							<p>+ 001 234 567</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 text-center">
+						<div class="intro animate-box">
+							<span class="icon">
+								<i class="icon-envelope"></i>
+							</span>
+							<h2>Email</h2>
+							<p><a href="#">info@domain.com</a><br><a href="#">luto@email.com</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="goto-here"></div>
+
+			</div>
+		</div>
+		
+		<div class="colorlib-testimony" style="background-image: url(images/bckgrnd.jpg);" data-stellar-background-ratio="0.5">
+				<div class="container">
+					<div class="row">
+							<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">	
+							
+							<h2>Our Work</h2>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+
+<!-- Top navigation -->
+<div class="topnav">
+
+		<!-- Centered link -->
+		<div class="topnav-centered">
+		  <a href="owl-carousel" class="active"><img src="images/icons/corporateicn.png"></a>
+		</div>
+		
+		<!-- Left-aligned links (default) -->
+		<a href="#news"><img src="images/icons/posticn.png"></a>
+		
+		<!-- Right-aligned links -->
+		<div class="topnav-right">
+		 
+		  <a href="#about"><img src="images/icons/wrkshpicn.png"></a>
+		</div>
+		
+	  </div>
+
+
+							
+								 
+						</div>
+					</div>
+					<div class="row animate-box">
+					<div class="owl-carousel">
+						<div class="item">
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<div class="testimony">
+									<img src="images/1.jpg">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<div class="testimony">
+									<img src="images/2.jpg">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<div class="testimony">
+										<img src="images/3.jpg">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<div class="testimony">
+										<img src="images/4.jpg">
+									</div>
+								</div>
+							</div>
+							<div class="item">
+									<div class="col-md-8 col-md-offset-2 text-center">
+										<div class="testimony">
+											<img src="images/5.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="item">
+										<div class="col-md-8 col-md-offset-2 text-center">
+											<div class="testimony">
+												<img src="images/6.jpg">
+											</div>
+										</div>
+									</div>
+					</div>
+				</div>
+
+
+				</div>
+			</div>
+		
+		<div class="colorlib-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
+						
+						<h2>Services</h2>
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 animate-box">
+						<div class="dish-wrap"> 
+							<div class="wrap"> 
+							<center>	<img src="images/icons/wrkshpicn.png"></center>
+									<h3><center>Workshops</center></h3>
+								<p>
+										We conduct film making workshops for aspiring film makers and actors periodically.We conduct corporate and college film making workshops as well.Our workshops aim at giving an overall idea about both the creative and technical aspects of film making.</p>
+								
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 animate-box">
+						<div class="dish-wrap">
+							<div class="wrap">
+									<center>	<img src="images/icons/corporateicn.png"></center>
+									<h3><center>Corporate Ads</center></h3>
+								<p>
+										We take up corporate ad-film projects which includes both shoot and post production.We can execute the ideas provided by the clients or we can provide creative inputs in conveying the ideas based on the clients requirements.</p>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 animate-box">
+						<div class="dish-wrap">
+							<div class="wrap">
+									<center>	<img src="images/icons/SFicn.png"></center>
+									<h3><center>Short Films</center></h3>
+								<p>
+										If you have an idea and are looking for a team to make the movie , we can help you with different aspects of the film , right from early stages like scripting,screenplay writing to the post production aspects like editing and sound design for the film.</p>
+										
+								
+							</div>
+						</div>
+					</div>
+				
+					<div class="col-md-4 animate-box">
+							<div class="dish-wrap">
+								<div class="wrap">
+										<center>	<img src="images/icons/posticn.png"></center>
+										<h3><center>Post Production Services</center></h3>
+									<p>
+											We even take up only the post production aspects such as editing,titling,subtitling,poster design,sound design and color correction for short-films ,ads and other videos.</p>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 animate-box">
+							<div class="dish-wrap">
+								<div class="wrap">
+										<center>	<img src="images/icons/Featureicn.png"></center>
+										<h3><center>Promos / Videos</center></h3>
+									<p>
+											We take up promo shoots,trailer shoots,making videos for short films and feature films.We also do portfolio video shoots and editing for actors based on the requirements.</p>
+									
+								</div>
+							</div>
+						</div>
+				
+				</div>
+			</div>
+		</div>
+
+		<div class="colorlib-introduction" style="background-image: url(images/bckgrnd.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 col-md-push-3">
+						<div class="intro-box animate-box">
+							<h2><a href="#"></a>About Us</h2>
+							
+<p>We offer outstanding creative solutions for all your communication needs. We take up Film Promos , Advertisements, Corporate Videos, Documentaries ,film making videos, wedding videos and Post production. 100 % Client satisfaction is our motto.Whether its a big production or a low budget one,we are happy to work with you. Please call us for an estimate or consultation regarding your upcoming video production.
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="colorlib-menu">
+			
+						
+						<center><h2>Gallery</h2></center>
+						<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="images/1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="images/2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="images/3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="images/4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="images/5.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="images/6.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+	  <img class="demo cursor" src="images/1.jpg" style="width:100%" onclick="currentSlide(1)"alt="">
+	  
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/2.jpg" style="width:100%" onclick="currentSlide(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/3.jpg" style="width:100%" onclick="currentSlide(3)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/4.jpg" style="width:100%" onclick="currentSlide(4)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/5.jpg" style="width:100%" onclick="currentSlide(5)" >
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/6.jpg" style="width:100%" onclick="currentSlide(6)" >
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+			</script>
+	    </div>
+	
+		<div class="colorlib-testimony" style="background-image: url(images/cover_bg_2.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
+						<h2>In Media</h2>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<div class="owl-carousel">
+						<div class="item">
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<div class="testimony">
+									<img src="images/1.jpg">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<div class="testimony">
+									<img src="images/2.jpg">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<div class="testimony">
+										<img src="images/3.jpg">
+								</div>
+							</div>
+						</div>
+						<div class="item">
+								<div class="col-md-8 col-md-offset-2 text-center">
+									<div class="testimony">
+										<img src="images/4.jpg">
+									</div>
+								</div>
+							</div>
+							<div class="item">
+									<div class="col-md-8 col-md-offset-2 text-center">
+										<div class="testimony">
+											<img src="images/5.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="item">
+										<div class="col-md-8 col-md-offset-2 text-center">
+											<div class="testimony">
+												<img src="images/6.jpg">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+					<div class="colorlib-intro">		
+<button class="tablink" onclick="openPage('Home', this)"id="defaultOpen">Workshop Details</button>
+<button class="tablink" onclick="openPage('News', this)" >Worshop Movies</button>
+<button class="tablink" onclick="openPage('Contact', this)">Feedback Videos</button>
+<button class="tablink" onclick="openPage('About', this)">About Instructor</button>
+<button class="tablink" onclick="openPage('Register', this)">Register Now</button>
+<div id="Home" class="tabcontent">
+ <div class="colorlib-intro">
+<div class="row" style="text-align:left;">
+    <img class="col-lg-6 nopadding" src="images/icons/workshop_poster.jpg" />
+ 	<!-------------- Add poster details------------->
+
+    <div class="col-lg-6"  >
+   
+    <h4 style="margin:0px 0 5px;color: #ECAE80;font-weight: 600;font-size: 22px;text-align: left;"> Goldenagefilmhouse Weekend film making workshop</h4>
+  <div style= "color:white">
+      <p> Goldenagefilmhouse Weekend film making workshop</p>
+
+<p>In 2 days, we not only teach you about film making , but also help you make your first short film . </p>
+
+<p>Aspects covered : Basics of Screenplay writing|Story boarding|Casting|Acting|Direction|Cinematography|Editing|Dubbing|Music </p>
+
+<p>Along with a theory session about various aspects of film making,there will also be a hands-on session where the team will come up with an idea for a film, shoot it and edit it during the course of the workshop,so as to give the participant, an overall understanding of how a film gets made. </p>
+
+<p>A very good platform for aspiring actors and film makers to learn the basics of all the aspects of film making and also to meet like minded folks.</p>
+
+<p>Selected folks from the workshop will get to be a part of the future projects of Goldenagefilmhouse team.</p>
+				</div>
+  		  	</div>
+     	</div>
+	</div>
+</div>
+
+
+<div id="News" class="tabcontent">
+		<div class="colorlib-intro">
+  <h3 style="color:white;text-align:center;">Workshop Movies</h3>
+  <hr></hr>
+  
+  <section id="slider">
+		<input type="radio" name="slider" id="s1">
+		<input type="radio" name="slider" id="s2">
+		<input type="radio" name="slider" id="s3" checked>
+		<input type="radio" name="slider" id="s4">
+		<input type="radio" name="slider" id="s5">
+		<label for="s1" id="slide1"></label>
+		<label for="s2" id="slide2"></label>
+		<label for="s3" id="slide3"></label>
+		<label for="s4" id="slide4"></label>
+		<label for="s5" id="slide5"></label>
+	  </section>
+</div>
+</div>
+
+<div id="Contact" class="tabcontent">
+		<div class="colorlib-intro">
+  <h3 style="color:white;text-align:center;">Participants Feedback</h3>
+  
+  <hr></hr>
+ 
+  <div class="container1">
+        <div id="carousel">
+            <figure><img src="images/Feedback1.jpg" alt=""></figure>
+            <figure><img src="images/Feedback2.jpg" alt=""></figure>
+            <figure><img src="images/Feedback3.jpg" alt=""></figure>
+            <figure><img src="images/Feedback4.jpg" alt=""></figure>
+            <figure><img src="images/Feedback5.jpg" alt=""></figure>
+            <figure><img src="images/Feedback6.jpg" alt=""></figure>
+            <figure><img src="images/Feedback7.jpg"alt=""></figure>
+            <figure><img src="images/Feedback8.jpg" alt=""></figure>
+            <figure><img src="images/Feedback9.jpg" alt=""></figure>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="About" class="tabcontent">
+		<div class="colorlib-intro">
+			<div style="color:white">
+  <h3 style="color:white;text-align:center;">About Instructor</h3>
+  <hr></hr>
+  <div class="row-fluid" align="justify" id="service_worksh_4"> 
+  <div class="row">
+  <img class="col-lg-3 nopadding" src="images/icons/Keerthi1.jpg" />
+<div class="col-lg-9" style="height:280px;">
+<div>
+<h4 style="margin:0px 0 5px;color: #ECAE80;font-weight: 600;font-size: 22px;text-align: left;">Vihaan (Keerthi Natarajan) </h4>
+<div>
+<p> Vihaan is a national level award winning actor/writer/director and editor who has worked in around 40 shortfilms/adfilms and around 5 Kannada feature films till now.<br/>
+He is the founder of the film making company GoldenAgeFilmHouse.<br/>
+His short film 'Navilugari' won at Bangalore international short film festival and Goa short film carnival.<br/>
+His Ad 'RajmaUpma' won the national level ad film competition 'CrashthePepsiIPL'<br/>
+He has been conducting film making workshops across Bangalore for the last two years.<br/>
+Has worked as an associate director for a Kannada feature film and currently working on his debut directorial venture in Kannada<br/> 
+He is an engineer turned film maker and hence follows an engineering approach in making and teaching films.</p>
+<a target="_blank" href="//www.youtube.com/playlist?list=PLFJ6j_uRUKP52JNGChA-V4Y3qz-g79h4T" class="btn btn-standard btn-download" style="min-width:160px;padding: 5px;">Filmography</a>
+</div>
+</div>
+</div>
+</div>
+</div> 
+		 
+   </div>
+
+</div>
+</div>
+<div id="Register" class="tabcontent">
+		<div class="colorlib-intro">
+  <h3 style="color:white;text-align:center;">Registration Form</h3>
+ <hr></hr>
+ <div class="colorlib-intro" style="align-items:center">
+		<center>
+			<input type="text" placeholder="Fullname" style="text-align:center;font-size: 22px;color:white;"/>
+		<input type="text" placeholder="Phone" style="text-align:center;font-size: 22px;color:white;"/>
+		<input type="text" placeholder="Email" style="text-align:center;font-size: 22px;color:white;"/></center><br><br>
+	  <center><button  class="button"> Register</button></center>
+	  </div>
+	  </div>
+</div>
+<footer>
+<center>	
+<!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+</center>
+</footer>
+</div>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+		</script>
+		
+		
+										
+		
+	
+	
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Date Picker -->
+	<script src="js/bootstrap-datepicker.js"></script>
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
