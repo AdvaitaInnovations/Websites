@@ -22,6 +22,8 @@
 </head>
 
 <body>
+
+
   <!--Navigation bar-->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -36,7 +38,7 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#feature">Features</a></li>
-          <li><a href="#faculity-member">Faculty</a></li>
+          <!--<li><a href="#faculity-member">Faculty</a></li>-->
           <li><a href="#courses">Courses</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#" data-target="#login" data-toggle="modal">Register</a></li>
@@ -60,18 +62,19 @@
 
           <div class="login-box-body">
             <p class="login-box-msg">Register to choose your course</p>
+			
             <div class="form-group">
-              <form name="" id="loginForm">
+              <form action="register.php" method="POST" >
                 <div class="form-group has-feedback">
                   <!----- username -------------->
-                  <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" />
+                  <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" name="Name"/>
                   <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginid"></span>
                   <!---Alredy exists  ! -->
                   <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
                   <!----- password -------------->
-                  <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" />
+                  <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" name="pwd"/>
                   <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
                   <!---Alredy exists  ! -->
                   <span class="glyphicon glyphicon-lock form-control-feedback"></span>
@@ -85,7 +88,7 @@
                     </div>
                   </div> -->
                   <div class="col-xs-12">
-                    <button type="button" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Register</button>
+                    <button type="submit" class="btn btn-green btn-block btn-flat" >Register</button>
                   </div>
                 </div>
               </form>
@@ -109,7 +112,7 @@
             <div class="intro-para text-center quote">
               <p class="big-text">Learning Today . . . Leading Tomorrow.</p>
              <!--  <p class="small-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim repellat sapiente quos architecto<br>Laudantium enim repellat sapiente quos architecto</p> -->
-              <a href="#footer" class="btn get-quote">GET A QUOTE</a>
+            <!--  <a href="#footer" class="btn get-quote">GET A QUOTE</a>-->
             </div>
             <a href="#feature" class="mouse-hover">
               <div class="mouse"></div>
@@ -304,7 +307,7 @@
   </section> -->
   <!--/ work-shop-->
   <!--Faculity member-->
-  <section id="faculity-member" class="section-padding">
+ <!-- <section id="faculity-member" class="section-padding">
     <div class="container">
       <div class="row">
         <div class="header-section text-center">
@@ -359,7 +362,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section>-->
   <!--/ Faculity member-->
   <!--Testimonial-->
   <section id="testimonial" class="section-padding">
@@ -455,7 +458,7 @@
             <img src="img/Android11.jpg" class="img-responsive">
             <figcaption>
               <h3>Android Development</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+              <p>Android Studio is the official integrated development environment (IDE) for Google's Android operating system, built on JetBrains' IntelliJ IDEA software and designed specifically for Android development. It is a replacement for the Eclipse Android Development Tools (ADT).</p>
             </figcaption>
             <a href="#"></a>
           </figure>
@@ -465,7 +468,7 @@
             <img src="img/Digital.jpg" class="img-responsive">
             <figcaption>
               <h3>Digital Marketing</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+              <p>Digital marketing encompasses all marketing efforts that use an electronic device or the internet. Businesses leverage digital channels such as search engines, social media, email, and other websites to connect with current and prospective customers.</p>
             </figcaption>
             <a href="#"></a>
           </figure>
@@ -562,7 +565,7 @@
               <div class="validation"></div>
             </div>
           </div>
-
+		 
           <div class="col-xs-12">
             <!-- Button -->
 
