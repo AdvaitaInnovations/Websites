@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eco-Bangalorean</title>
+    <meta charset="utf-8" />
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7/leaflet.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script>
+function myFunction() {
+  window.location.href="index.html";
+}
+</script>
+</head>
+<body>
+
+    <div id="map" style="width: 600px; height: 400px"></div>
+
+    <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7/leaflet.js">
+    </script>
+
+    <script>
+  var planes =[];
+    $.get(
+      "getbb.php",
+      function(data) {
+       if(data!=null){
+       let jsonData= JSON.parse(data);
+      for(var i=0;i<jsonData.length; i++){
+       console.log(jsonData[i]);
+       var tdata ={
+       name:jsonData[i].name,
+       lat:jsonData[i].lat,
+       lon: jsonData[i].lon,
+       category: jsonData[i].category,
+      }
+      planes.push(tdata);
+      }
+
+        var map = L.map('map').setView([13.02588, 77.57581], 13);
+        mapLink = 
+            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+        L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; ' + mapLink + ' Contributors',
+            maxZoom: 18,
+            }).addTo(map);
+
+    for (var i = 0; i < planes.length; i++) {
+      marker = new L.marker([planes[i].lat,planes[i].lon])
+        .bindPopup(planes[i].name +" "+ planes[i].category)
+        .addTo(map);
+    }
+      }
+      }
+    );
+
+               
+    </script>
+
+
+ <button class="btn btn-primary" onclick="myFunction()">Close</button>
+ 
+</body>
+</html>

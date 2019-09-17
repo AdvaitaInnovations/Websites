@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Eco-Ganesha - Tell us where you celebrated Ganesha Festival in an eco-friendly way</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script>
+         function myFunction() {
+          
+        window.location.href='sam.html';
+        
+         }
+         function validate()
+{ 
+ if( document.register.fileToUpload.value == "" ) {
+            alert( "Please provide your image!" );
+            document.register.fileToUpload.focus() ;
+            return false;
+         }
+         
+        
+         if( document.register.Name.value == "" ) {
+            alert( "Please provide your name!" );
+            return false;
+         }
+		 if( document.register.phone.value == "" ) {
+            alert( "Please provide your Phone!" );
+            return false;
+         }
+         return( true );
+}
+      </script>
+      <style>
+          #mapid {
+            height: 300px;
+            width:300px;
+            /*z-index: 1;
+            padding: 20px;*/
+            }
+         body {font-family: libre baskerville;}
+         * {box-sizing: border-box;}
+         input[type=text], select, textarea {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         resize: vertical;
+         }
+         input[type=submit] {
+         background-color: #4646bd;
+         color: white;
+         padding: 12px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         }
+         input[type=submit]:hover {
+         background-color: #4646bd;
+         }
+         .container {
+         border-radius: 5px;
+         background-color: #f2f2f2;
+         padding: 20px;
+         width:85%;
+         font-style: libre baskerville;
+         }
+         #container1 {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+         h3{color:blue}
+         #p1{color:red}
+      </style>
+   </head>
+   <body>
+      <center>
+          <h3> Congratulations on celebrating Ganesha festival in an eco-friendly way. </h3>
+          
+      </center>
+	   <center>
+  
+</center>
+      <div class="container">
+	  <form action="bb.php" method="POST"  enctype="multipart/form-data" name = "register" onsubmit = "return(validate());" >
+	  
+            <label for="image">Upload your Ganesha Photo</label>
+            <input type="file" name="fileToUpload" id="fileToUpload" multiple></br>
+            <hr height="8" style="color:purple;background-color:purple;"></hr>
+           <p><b>Where did you celebrate?</b></p>
+            </br>
+            <p id="p1"><b>Choose your location below by dragging the marker to your location.</b></p>
+
+            <!-- <div id="container1"> -->
+             <div id="mapid"></div>
+         
+            
+
+ <!--
+</br>
+<button class="btn btn-primary" onclick="getLocation()">Get Location</button>
+
+<p id="demo"></p> -->
+
+           
+        
+      <!-- </div> -->
+     <!--  </div>       
+       <div class="container">-->
+         
+         
+            <p>The Location is <p id="locationdisplay"></p> </p>
+       
+
+       <div class="row">
+      <section class="col col-3">
+        <label class="input">
+          <input id="Latitude" placeholder="Latitude" name="Latitude" />
+          <!-- @Html.TextBoxFor(m => m.Location.Latitude, new {id = "Latitude", placeholder = "Latitude"}) -->
+        </label>
+      </section>
+      <section class="col col-3">
+        <label class="input">
+          <input id="Longitude" placeholder="Longitude" name="Longitude" />
+          <!-- @Html.TextBoxFor(m => m.Location.Longitude, new {id = "Longitude", placeholder = "Longitude"}) -->
+        </label>
+      </section>
+    </div>
+            <!-- <label for="latitude"><b><br>Latitude</b></label>
+            <input type="text" placeholder="Enter latitude" name="Latitude" required id="lat" />
+      
+            <label for="longitude"><b><br>Longitude</b></label>
+            <input type="text" placeholder="Enter longitude" name="Longitude" required id="long" />
+           -->
+              <p id="p1" > <b>&nbsp -- OR -- &nbsp </b> </p>
+                <label for="address">Enter Address Manually</label>
+            <textarea id="address" name="Address" placeholder="Mention your Address" style="height:100px"></textarea>
+            <hr>
+              <label>
+            <input name="category" type="radio"  value="individual" />
+            <span>As an Individual</span>
+            </label></br></br>
+            <p id="p1"> <b>&nbsp -- OR -- &nbsp </b> </p>
+            </br>
+            <label>
+            <input  name="category" type="radio"  value="Community"/>
+            <span>As a Group</span>
+            </label></br>
+            <hr>
+            
+            
+            <label for="subject">Name</label>
+            <input type="text" placeholder="Enter Name" name="Name"  /> 
+            </br>
+            <hr>
+            <label for="subject">Phone Number</label>
+            <input placeholder="Enter Phone Number" name="phone"  /> </br></br>
+         
+            <button class="btn btn-primary" name="fileToUploadsub" onclick="choose()">Submit</button>
+			
+         </div>
+		 
+      </form>
+	
+
+<script>
+   var lat = localStorage.getItem("lat");
+   var lon = localStorage.getItem("lon");
+   // document.getElementById("demo").innerHTML = ("Your Current lat :"+lat  +" "+"and lon :"+lon);
+</script>
+<!-- <script>
+    $('#submit').on('click', function() {
+    if ($('#container1').css('opacity') == 0) {
+        $('#container1').css('opacity', 1);
+    }
+    else {
+        $('#container1').css('opacity', 0);
+    }
+});
+</script> -->
+<script>
+  var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+// function showPosition(position) {
+//   x.innerHTML = "Latitude: " + position.coords.latitude + 
+//   "<br>Longitude: " + position.coords.longitude;
+// }
+//        var latt,lon;
+        
+//         /* Display of map */
+//         var storeloc;
+//        var mymap = L.map('mapid'), infoWindow;
+//         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//             attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+//             minZoom: 4,
+//             maxZoom: 20,
+//            id: 'mapbox.streets',
+
+//         }).addTo(mymap);
+
+//   // var HELSINKI = [12.9716, 77.5946];
+//   //        Geolocation - autolocate 
+//   //         mymap.setView(HELSINKI, 14);
+
+//         function onLocationFound(e) {
+//             var radius = e.accuracy / 2;
+//             L.marker(e.latlng).addTo(mymap).bindPopup("You are within " + radius + " meters from this point");
+//             L.circle(e.latlng, radius).addTo(mymap);
+//             document.getElementById("locationdisplay").innerHTML = e.latlng;
+//             document.getElementById('lat').setAttribute("value", e.latlng.lat);
+//             document.getElementById('long').setAttribute("value", e.latlng.lng);
+//             document.getElementById('lcn').setAttribute("value", `${e.latlng.lat},${e.latlng.lng}`);
+//         }
+//            function myFunction() {
+
+
+// }
+
+$(function() {
+  // use below if you want to specify the path for leaflet's images
+  //L.Icon.Default.imagePath = '@Url.Content("~/Content/img/leaflet")';
+
+  var curLocation = [0, 0];
+  // use below if you have a model
+  // var curLocation = [@Model.Location.Latitude, @Model.Location.Longitude];
+
+  if (curLocation[0] == 0 && curLocation[1] == 0) {
+    curLocation = [12.9716, 77.5946];
+  }
+
+  var map = L.map('mapid').setView(curLocation, 10);
+
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  map.attributionControl.setPrefix(false);
+
+  var marker = new L.marker(curLocation, {
+    draggable: 'true'
+  });
+
+  marker.on('dragend', function(event) {
+    var position = marker.getLatLng();
+    marker.setLatLng(position, {
+      draggable: 'true'
+    }).bindPopup(position).update();
+    $("#Latitude").val(position.lat);
+    $("#Longitude").val(position.lng).keyup();
+  });
+
+  $("#Latitude, #Longitude").change(function() {
+    var position = [parseInt($("#Latitude").val()), parseInt($("#Longitude").val())];
+    marker.setLatLng(position, {
+      draggable: 'true'
+    }).bindPopup(position).update();
+    map.panTo(position);
+  });
+
+  map.addLayer(marker);
+})           
+         
+     
+    
+
+        /* Geolocation error */
+        // function onLocationError(e) {
+        //     swal({
+        //     icon: 'error',
+        //     title: 'Oops',
+        //     text: e.message,
+        //     button: 'OK',
+        //     }); 
+        //  console.log("Error in getting location");
+        // }
+
+        // mymap.on('locationerror', onLocationError);
+        // mymap.on('locationfound', onLocationFound);
+        
+        /* Prompt for user to click on map */
+        // swal({
+        //     icon: 'info',
+        //     text: 'Click anywhere on the map to pinpoint location of the problem you wish to report',
+        //     button: 'OK',
+        // });
+
+        /* obtains lat-lng values and rounds it off */
+  //       function onMapClick(e) {
+  //           storeloc = e.latlng;
+  //           console.log(storeloc);
+  //           var one = Math.round(e.latlng.lat * 100000)/100000;
+  //           var two = Math.round(e.latlng.lng * 100000)/100000;
+  //           var res = one + "," + two;
+  //           // swal({
+  //           //     icon: 'info',
+  //           //     text: 'Thank you for selecting location. Fill form below!',
+  //           //     button: 'OK',
+  //           //     });
+  //           document.getElementById('locationdisplay').innerHTML = storeloc;
+  //           document.getElementById('lat').value = one;
+  //           document.getElementById('long').value = two;
+  //           document.getElementById('lcn').value= res;
+  //          localStorage.setItem("lat", document.getElementById('lat').value = one);
+  //          localStorage.setItem("lon", document.getElementById('long').value = two)}
+  //       mymap.on('click', onMapClick);
+
+  //       /* Creating icon characteristics for inserting icon based on category */
+  //       var category_icon = L.Icon.extend({
+  //           options: {
+  //               iconSize: [25, 25]
+  //               }
+  //       });
+        
+  //       /* We want bin to be smaller since map looks conjusted */
+  //       var bin_icon = L.Icon.extend({
+  //           options: {
+  //               iconSize: [18,18]
+  //           }
+  //       })
+         
+  //       var lat = localStorage.getItem("lat");
+  // var lon = localStorage.getItem("lon");
+  //  //alert("lat :"+lat+" "+"lon :"+lon);
+
+
+
+
+       </script>
+  
+   </body>
+</html>
+
+ <script>console.log('GaneshaIdol');</script><script> var marker = L.marker([12.9716, 77.5946]).addTo(mymap);
+                    marker.bindPopup(" <br> "); 
+            </script><script>console.log('GaneshaIdol');</script> 

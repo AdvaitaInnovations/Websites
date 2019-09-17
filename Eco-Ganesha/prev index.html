@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Eco-Ganesha</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script>
+         function myFunction() {
+          
+		  window.location.href='sam.html';
+		  
+         }
+         
+      </script>
+      <style>
+         body {font-family: libre baskerville;}
+         * {box-sizing: border-box;}
+         input[type=text], select, textarea {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         resize: vertical;
+         }
+         input[type=submit] {
+         background-color: #4646bd;
+         color: white;
+         padding: 12px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         }
+         input[type=submit]:hover {
+         background-color: #4646bd;
+         }
+         .container {
+         border-radius: 5px;
+         background-color: #f2f2f2;
+         padding: 20px;
+         width:80%;
+         font-style: libre baskerville;
+         }
+         h2{color:blue}
+         p1{color:red}
+      </style>
+   </head>
+   <body>
+      <center>
+         <h2>Tell us how you celebrated Ganesha Festival</h2>
+      </center>
+	    <div class="container">
+		<button class="btn btn-primary" onclick="myFunction()">Choose Location</button>
+		</div>
+      <form action="bb.php" method="POST">
+         <div class="container">
+            <label>
+            <input name="category" type="radio"  value="individual" />
+            <span>As an Individual</span>
+            </label></br></br>
+            <p> <b>&nbsp -- OR -- &nbsp </b> </p>
+            </br></br>
+            <label>
+            <input  name="category" type="radio"  value="Community"/>
+            <span>As a Group</span>
+            </label></br></br>
+            <hr>
+            <p><b>Where did you celebrate?</b></p>
+            </br></br>
+           
+            </br></br>
+            <p id="demo" style="font-size: 20px"></p>
+            <b>&nbsp -- OR -- &nbsp</b> </br></br>
+            <label for="address">Enter Address Manually</label>
+            <textarea id="address" name="Address" placeholder="Mention your Address" style="height:100px"></textarea>
+            <hr>
+            <label for="Phone">Upload your Ganesha Photo</label>
+            <input type="file" name="fileToUpload" id="fileToUpload" multiple></br>
+            <hr>
+            <label for="subject">Name</label>
+            <input type="text" placeholder="Enter Name" name="Name"  /> 
+            <label for="subject">Phone Number</label>
+            <input type="number" placeholder="Enter Phone Number" name="phone"  /> </br></br>
+			
+            <button class="btn btn-primary" onclick="choose()">Submit</button>
+         </div>
+      </form>
+	   
+   </body>
+</html>
+<script>
+   var lat = localStorage.getItem("lat");
+   var lon = localStorage.getItem("lon");
+   document.getElementById("demo").innerHTML = ("lat :"+lat  +" "+"lon :"+lon);
+</script>
